@@ -8,7 +8,7 @@ Technologies: Jquery, Bootstrap
 
 All the elements are loaded in at the start, the scripts just hide or show elements accordingly, giving the appearance of a seamless SPA. 
 
-May or may not be deployed at [here](https://sampsale.github.io/PhotoApp/). 
+May or may not be deployed [here](https://sampsale.github.io/PhotoApp/). 
 
 ![Example photo 1](images/examplephoto1.png)
 
