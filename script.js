@@ -42,7 +42,7 @@ $(document).ready(function () {
 
         // Reset explanation and point divs
         $('.image-container').find('.explanation').text('');
-        $('.image-container').find('.timestamp').text("Score: " + points);
+        $('.image-container').find('.timestamp').text("Pisteet: " + points);
 
         // Load the image data from the JSON file
         $.getJSON('images/images.json', function (data) {
