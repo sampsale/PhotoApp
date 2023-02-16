@@ -86,8 +86,8 @@ $(document).ready(function () {
 
     // Display the points after each round and give info about the last image
     function displayPoints() {
-        $('.image-container').find('.explanation').text("Selite: " + imageCaption);
-        $('.image-container').find('.timestamp').text("Pisteet: " + points);
+        $('.image-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b></p>");
+        $('.image-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
         $('#nextround').show();
     }
 
