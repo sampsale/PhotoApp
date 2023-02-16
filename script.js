@@ -36,6 +36,7 @@ $(document).ready(function () {
         $('#submit').show();
         $('.game-container').show();
         $('#finishgame').hide();
+        $('.slider-container').show();
         // Init the game variables
         points = 0
         counter = 0
