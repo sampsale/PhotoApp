@@ -42,7 +42,7 @@ $(document).ready(function () {
 
         // Reset explanation and point divs
         $('.image-container').find('.explanation').text('');
-        $('.image-container').find('.timestamp').text("Pisteet: " + points);
+        $('.image-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
 
         // Load the image data from the JSON file
         $.getJSON('images/images.json', function (data) {
@@ -81,12 +81,12 @@ $(document).ready(function () {
         $('.game-container').hide();
         $('#startgame').show();
         $('.endgame-container').show();
-        $('.endgame-container').text('Lopullinen pistemääräsi on ' + points + '.');
+        $('.endgame-container').html('<p>Lopullinen pistemääräsi on ' + points + '.</p>');
     }
 
     // Display the points after each round and give info about the last image
     function displayPoints() {
-        $('.image-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b></p>");
+        $('.image-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b> Vuosi: <b>"+ imageTimestamp+"</b></p>");
         $('.image-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
         $('#nextround').show();
     }
@@ -104,6 +104,7 @@ $(document).ready(function () {
 
     // Button listener for next round
     $("#nextround").click(function () {
+        $('.slider-container').show();
         $('.image-container').find('.explanation').text('');
         counter++
         displayImage()
@@ -115,6 +116,7 @@ $(document).ready(function () {
     // Button listener for submit
     $("#submit").click(function () {
         $('#submit').hide();
+        $('.slider-container').hide();
         checkPoints()
     });
 

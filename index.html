@@ -3,7 +3,7 @@
 
 <head>
     <title>jQuery Example</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -29,10 +29,12 @@
                 <div class="year"></div>
             </div>
 
-            <div class="slider-container>">
-                <label for="year-selector">Valitse vuosi:</label>
+            <div>
+                <div class="slider-container">
+                <label for="year-selector"><p>Valitse vuosi:</p></label>
                 <input class='slider' id="year-selector" type="range" min="1900" max="2022" step="1" />
                 <p>Vuosi: <output id="value"></output></p>
+                </div>
                 <button id="submit" class="btn btn-info mt-3 btn-lg">Submit</button>
                 <button id="nextround" class="btn btn-primary mt-3 btn-lg">Next round</button>
                 <button id="finishgame" class="btn btn-success mt-3 btn-lg">Finish Game</button>
