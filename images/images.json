@@ -1,0 +1,29 @@
+{
+    "images": [
+      {
+        "src": "images/kuva1.avif",
+        "caption": "Kekkosen hautajaiset.",
+        "timestamp": 1986
+      },
+      {
+        "src": "images/kuva2.png",
+        "caption": "Suomen lipun nosto Lappiin Lapin sodan päättyessä.",
+        "timestamp": 1945
+      },
+      {
+        "src": "images/kuva3.jpg",
+        "caption": "Kultajuhlat 1995.",
+        "timestamp": 1995
+      },
+      {
+        "src": "images/kuva4.jpg",
+        "caption": "Uudenmaan sulku koronapandemian aikaan.",
+        "timestamp": 2020
+      },
+      {
+        "src": "images/kuva5.jpg",
+        "caption": "Graf Zeppelin Suomessa.",
+        "timestamp": 1930
+      }
+    ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Example</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1>Arvaa vuosi kuvan perusteella</h1>
+        <div class="endgame-container">Points will be displayed here</div>
+
+        <div class="button-container">
+            <button id="startgame" class="btn btn-primary mt-3 btn-lg">Start Game</button>
+        </div>
+
+        <div class="game-container">
+
+            <div class="image-container">
+                <img src="" alt="">
+                <div class="score-container my-3"><br>
+                    <div class="timestamp"></div>
+                    <div class="explanation"></div>
+                </div>
+                <div class="year"></div>
+            </div>
+
+            <div class="slider-container>">
+                <label for="year-selector">Valitse vuosi:</label>
+                <input class='slider' id="year-selector" type="range" min="1900" max="2022" step="1" />
+                <p>Vuosi: <output id="value"></output></p>
+                <button id="submit" class="btn btn-info mt-3 btn-lg">Submit</button>
+                <button id="nextround" class="btn btn-primary mt-3 btn-lg">Next round</button>
+                <button id="finishgame" class="btn btn-success mt-3 btn-lg">Finish Game</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
