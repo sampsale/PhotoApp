@@ -1,10 +1,6 @@
-img {
-    height: 512px;
-    
-}
+img  {
+    height: 32em;   
 
-.slider {
-    width: 500px
 }
 
 .game-container, .endgame-container, .year, #finishgame{

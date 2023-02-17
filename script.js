@@ -1,8 +1,8 @@
 
-// Create the year options
+
 $(document).ready(function () {
     
-    // variables to current control image data 
+    // variables to current image data 
     let imageUrl
     let imageCaption
     let imageTimestamp
@@ -42,8 +42,8 @@ $(document).ready(function () {
         counter = 0
 
         // Reset explanation and point divs
-        $('.image-container').find('.explanation').text('');
-        $('.image-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
+        $('.score-container').find('.explanation').text('');
+        $('.score-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
 
         // Load the image data from the JSON file
         $.getJSON('images/images.json', function (data) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
             // Selected first two elements from shuffled array
             selected = shuffled.slice(0, game_rounds);
 
-            $('.image-container').find('.caption').text(points);
+            $('.score-container').find('.caption').text(points);
             displayImage()
 
         });
@@ -87,8 +87,8 @@ $(document).ready(function () {
 
     // Display the points after each round and give info about the last image
     function displayPoints() {
-        $('.image-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b> Vuosi: <b>"+ imageTimestamp+"</b></p>");
-        $('.image-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
+        $('.score-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b> Vuosi: <b>"+ imageTimestamp+"</b></p>");
+        $('.score-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
         $('#nextround').show();
     }
 
@@ -98,7 +98,7 @@ $(document).ready(function () {
         imageUrl = selected[counter].src;
         imageTimestamp = selected[counter].timestamp;
         imageCaption = selected[counter].caption;
-        // Set the image and captions in the HTML
+        // Set the image in the HTML
         $('.image-container').find('img').attr('src', imageUrl);
 
     }
@@ -106,7 +106,7 @@ $(document).ready(function () {
     // Button listener for next round
     $("#nextround").click(function () {
         $('.slider-container').show();
-        $('.image-container').find('.explanation').text('');
+        $('.score-container').find('.explanation').text('');
         counter++
         displayImage()
         $('#nextround').hide();
