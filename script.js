@@ -2,10 +2,14 @@
 
 $(document).ready(function () {
     
-    // variables to current image data 
+    // variables for current image data 
     let imageUrl
     let imageCaption
     let imageTimestamp
+
+    // URL for backend API
+    // const backend_url = "https://vuosipelibackend-1-w9912448.deta.app/"
+    
     // Points variable
     let points
     // Counter to count how many rounds 
@@ -57,19 +61,38 @@ $(document).ready(function () {
             displayImage()
 
         });
+
     }
 
     // Check if the selected year is correct and count points
     function checkPoints() {
 
+        let howfar = Math.abs($("#year-selector").val() - imageTimestamp)
+        let message = ''
+        if (howfar === 0) {
+            points += 3
+            message = 'Täysin oikein!'
+        } else if (howfar <= 10) {
+            points += 2
+            message = 'Aika lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
+        } else if (howfar <= 20) {
+            points += 1
+            message = 'Lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
+        } else {
+            points += 0
+            message = 'Nyt meni mönkään... Arvauksesi oli ' + howfar + ' vuoden päässä.'
+        }
+
+        console.log(message)
+        $('.score-container').find('.explanation').html("<p>" + message + "</p>");
         // Deduce points accordingly 
-        points += 100 - (Math.abs($("#year-selector").val() - imageTimestamp))
+        // points += points - (Math.abs($("#year-selector").val() - imageTimestamp))
         // If not last pic, display points. Else hide nextround and show finishgame
         if (counter < selected.length - 1) {
-            displayPoints()
+            displayPoints(message)
 
         } else {
-            displayPoints()
+            displayPoints(message)
             $('#finishgame').show();
             $('#nextround').hide();
         }
@@ -86,8 +109,8 @@ $(document).ready(function () {
     }
 
     // Display the points after each round and give info about the last image
-    function displayPoints() {
-        $('.score-container').find('.explanation').html("<p>Selite: <b>" + imageCaption+"</b> Vuosi: <b>"+ imageTimestamp+"</b></p>");
+    function displayPoints(message) {
+        $('.score-container').find('.explanation').html("<p>" + message + "</p> <p> Selite: <b>" + imageCaption+"</b> Vuosi: <b>"+ imageTimestamp+"</b></p>");
         $('.score-container').find('.timestamp').html("<p>Pisteet: " + points+"</p>");
         $('#nextround').show();
     }
