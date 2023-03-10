@@ -67,6 +67,7 @@ $(document).ready(function () {
     // Check if the selected year is correct and count points
     function checkPoints() {
 
+        // Count points accordingly to the distance from the correct year and base message on that
         let howfar = Math.abs($("#year-selector").val() - imageTimestamp)
         let message = ''
         if (howfar === 0) {
@@ -74,16 +75,15 @@ $(document).ready(function () {
             message = 'Täysin oikein!'
         } else if (howfar <= 10) {
             points += 2
-            message = 'Aika lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
+            message = 'Tosi lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
         } else if (howfar <= 20) {
             points += 1
-            message = 'Lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
+            message = 'Melkein! Arvauksesi oli ' + howfar + ' vuoden päässä.'
         } else {
             points += 0
             message = 'Nyt meni mönkään... Arvauksesi oli ' + howfar + ' vuoden päässä.'
         }
 
-        console.log(message)
         $('.score-container').find('.explanation').html("<p>" + message + "</p>");
         // Deduce points accordingly 
         // points += points - (Math.abs($("#year-selector").val() - imageTimestamp))
