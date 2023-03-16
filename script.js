@@ -78,7 +78,7 @@ $(document).ready(function () {
             message = 'Tosi lähellä! Arvauksesi oli ' + howfar + ' vuoden päässä.'
         } else if (howfar <= 20) {
             points += 1
-            message = 'Melkein! Arvauksesi oli ' + howfar + ' vuoden päässä.'
+            message = 'Ainakin sinnepäin! Arvauksesi oli ' + howfar + ' vuoden päässä.'
         } else {
             points += 0
             message = 'Nyt meni mönkään... Arvauksesi oli ' + howfar + ' vuoden päässä.'

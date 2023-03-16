@@ -24,6 +24,21 @@
         "src": "images/kuva5.jpg",
         "caption": "Graf Zeppelin Suomessa",
         "timestamp": 1930
+      },
+      {
+        "src": "images/kuva6.jpg",
+        "caption": "Kieltolaki päättyi ja Alkot aukesivat",
+        "timestamp": 1932
+      },
+      {
+        "src": "images/kuva7.jpg",
+        "caption": "Kuningatar Elisabeth Suomessa",
+        "timestamp": 1976
+      },
+      {
+        "src": "images/kuva8.jpg",
+        "caption": "Anne Pohtamosta Miss Suomi",
+        "timestamp": 1975
       }
     ]
 }
